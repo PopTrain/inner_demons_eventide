@@ -1,0 +1,28 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Code files
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.json text eol=lf
+*.rb text eol=lf
+*.lua text eol=lf
+
+# Multimedia and graphics assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.bmp binary
+*.ico binary
+
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.mid binary
+*.midi binary
+
+# Font files
+*.ttf binary
+*.otf binary
