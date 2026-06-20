@@ -11,8 +11,15 @@ endif()
 
 project ("inner_demons_eventide")
 
-# Add source to this project's executable.
-add_executable (inner_demons_eventide "main.cpp" "main.hpp")
+# Collect all source files recursively from the src directory
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+file(GLOB_RECURSE HEADERS "include/*.hpp" "include/*.h")
+
+# Add the executable with the collected files
+add_executable (inner_demons_eventide ${SOURCES} ${HEADERS})
+
+# Defne the include directory for headers
+target_include_directories(inner_demons_eventide PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET inner_demons_eventide PROPERTY CXX_STANDARD 20)
