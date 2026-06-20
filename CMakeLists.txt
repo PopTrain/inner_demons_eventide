@@ -19,7 +19,7 @@ file(GLOB_RECURSE HEADERS "include/*.hpp" "include/*.h")
 add_executable (inner_demons_eventide ${SOURCES} ${HEADERS})
 
 # Defne the include directory for headers
-target_include_directories(inner_demons_eventide PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(inner_demons_eventide PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET inner_demons_eventide PROPERTY CXX_STANDARD 20)
